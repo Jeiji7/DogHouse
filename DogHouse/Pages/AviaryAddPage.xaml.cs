@@ -13,17 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DogHouse
+namespace DogHouse.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для AviaryAddPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AviaryAddPage : Page
     {
-        public MainWindow()
+        public AviaryAddPage()
         {
             InitializeComponent();
-            MainFrame.Navigate(new Pages.AuthorizationPage());
         }
     }
 }
