@@ -9,6 +9,7 @@
       Title="IllnessPage">
 
     <Grid>
-        
+        <TextBlock>TT</TextBlock>
+        <TextBlock>TT</TextBlock>
     </Grid>
 </Page>
