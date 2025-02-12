@@ -9,6 +9,15 @@
       Title="NavigationPage">
 
     <Grid>
-        
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
+            <TextBlock Style="{DynamicResource H1}">Страница навигации</TextBlock>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button>1 кнопка</Button>
+            <Button>1 кнопка</Button>
+            <Button>1 кнопка</Button>
+            <Button>1 кнопка</Button>
+            <TextBox></TextBox>
+        </StackPanel>
     </Grid>
 </Page>
