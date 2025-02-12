@@ -67,11 +67,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PageList\IllnessPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AuthorizationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\EditAnimalInfoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\EmplAddPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -81,11 +89,17 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PageList\IllnessPage.xaml.cs">
+      <DependentUpon>IllnessPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AuthorizationPage.xaml.cs">
       <DependentUpon>AuthorizationPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\EditAnimalInfoPage.xaml.cs">
       <DependentUpon>EditAnimalInfoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EmplAddPage.xaml.cs">
+      <DependentUpon>EmplAddPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\NavigationPage.xaml.cs">
       <DependentUpon>NavigationPage.xaml</DependentUpon>
