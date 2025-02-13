@@ -22,5 +22,6 @@
         <TextBlock Text="Администратор" Style="{DynamicResource H1}" />
 
         <Button x:Name="VolyerBTN" Grid.Row="1" Height="40" Width="200" Content="Вольер"></Button>
+        <Button x:Name="SurveyBtn" Grid.Row="2" Width="200" Height="40" Click="SurveyBtn_Click">Приём</Button>
     </Grid>
 </Page>

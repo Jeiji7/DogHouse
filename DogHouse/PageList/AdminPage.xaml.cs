@@ -24,5 +24,10 @@ namespace DogHouse.PageList
         {
             InitializeComponent();
         }
+
+        private void SurveyBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
