@@ -5,8 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DogHouse.Windows"
         mc:Ignorable="d"
-        Title="AddAnrEditSurveyWindow" Height="450" Width="800">
+        Title="AddAnrEditSurveyWindow" Height="650" Width="800">
     <Grid>
-        
+        <StackPanel Orientation="Vertical">
+            <StackPanel>
+                <TextBlock Visibility="Visible" x:Name="AddTb" HorizontalAlignment="Center">AddSurvey</TextBlock>
+                <TextBlock Visibility="Collapsed" x:Name="EditTb" HorizontalAlignment="Center">EditSurvey</TextBlock>
+            </StackPanel>
+            <TextBlock Visibility="Collapsed" x:Name="NameDogeTb" HorizontalAlignment="Center">Doge: </TextBlock>
+            
+            
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="5 0">Illess:</TextBlock>
+                <TextBox x:Name="IllessTb" Width="200"></TextBox>
+            </StackPanel>
+            <StackPanel Margin="0 10 " Orientation="Horizontal">
+                <TextBlock Margin="5 0">Employee:</TextBlock>
+                <ComboBox x:Name="EmployeeCb" Width="200">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock  Text="{Binding LastName}" Margin="0 0 5 0"/>
+                                <TextBlock Text="{Binding FirstName}" Margin="0 0 5 0" />
+                                    <TextBlock Text="{Binding Name}" Margin=" 5 0 0 0"/>
+
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Margin="0 10 " Orientation="Horizontal">
+            <TextBlock Margin="5 0">Status:</TextBlock>
+            <ComboBox x:Name="StatusCb" Text="{Binding Name}"  Width="200"></ComboBox>
+        </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="5 0">Comment:</TextBlock>
+                <TextBox TextWrapping="Wrap" x:Name="CommentTb" Height="100" Width="280"></TextBox>
+            </StackPanel>
+            <StackPanel Margin="0 10 " Orientation="Horizontal">
+                <TextBlock Margin="5 0">Date:</TextBlock>
+                <DatePicker x:Name="DateCb" Width="200"></DatePicker>
+            </StackPanel>
+            <StackPanel Visibility="Visible" x:Name="DogeSt" Margin="0 10 " Orientation="Horizontal">
+                <TextBlock Margin="5 0">Doge:</TextBlock>
+                <ComboBox x:Name="DogeCb" Width="200" Text="{Binding Number}"></ComboBox>
+            </StackPanel>
+            <StackPanel>
+                <Button Visibility="Visible" Width="150" x:Name="AddBtn" Click="AddBtn_Click">Add</Button>
+                <Button Visibility="Collapsed" Width="150" x:Name="EditBtn" Click="EditBtn_Click">Edit</Button>
+                <Button Width="150" x:Name="CloseBtn" Click="CloseBtn_Click">Close</Button>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>

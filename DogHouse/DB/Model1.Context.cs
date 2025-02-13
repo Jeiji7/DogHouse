@@ -25,13 +25,13 @@ namespace DogHouse.DB
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Aviary> Aviary { get; set; }
         public virtual DbSet<Dog> Dog { get; set; }
         public virtual DbSet<Employee> Employee { get; set; }
         public virtual DbSet<Gender> Gender { get; set; }
         public virtual DbSet<StatusSurvey> StatusSurvey { get; set; }
         public virtual DbSet<Survey> Survey { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TypeAviary> TypeAviary { get; set; }
         public virtual DbSet<TypeEmployee> TypeEmployee { get; set; }
     }

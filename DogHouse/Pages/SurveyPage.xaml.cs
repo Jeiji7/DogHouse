@@ -24,7 +24,7 @@ namespace DogHouse.Pages
     public partial class SurveyPage : Page
     {
         public static ObservableCollection<Survey> surveys = new ObservableCollection<Survey>();
-        
+        private static Survey noneInfoSurvey;
         public SurveyPage()
         {
             InitializeComponent();
@@ -36,15 +36,33 @@ namespace DogHouse.Pages
         private void AddSurveyBtn_Click(object sender, RoutedEventArgs e)
         {
            App.editOrAdd = true;
-           AddAnrEditSurveyWindow addAnrEditSurveyWindow = new AddAnrEditSurveyWindow();
+           AddAnrEditSurveyWindow addAnrEditSurveyWindow = new AddAnrEditSurveyWindow(noneInfoSurvey);
+            addAnrEditSurveyWindow.SurveyUpdated += LoadSurveyList;
             addAnrEditSurveyWindow.ShowDialog();
         }
 
-        private void EditSurveyBtn_Click(object sender, RoutedEventArgs e)
+       
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
-            App.editOrAdd= false;
-            AddAnrEditSurveyWindow addAnrEditSurveyWindow = new AddAnrEditSurveyWindow();
+            NavigationService.GoBack();
+        }
+
+        private void SurveyLv_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+                App.editOrAdd = false;
+
+                AddAnrEditSurveyWindow addAnrEditSurveyWindow = new AddAnrEditSurveyWindow(SurveyLv.SelectedItem as Survey);
+            addAnrEditSurveyWindow.SurveyUpdated += LoadSurveyList;
             addAnrEditSurveyWindow.ShowDialog();
+            
+            
+        }
+        private void LoadSurveyList()
+        {
+            surveys = new ObservableCollection<Survey>(DbConnections.homeEntities.Survey.ToList());
+            SurveyLv.ItemsSource = surveys;
         }
     }
 }
