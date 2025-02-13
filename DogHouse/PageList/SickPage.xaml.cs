@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DogHouse.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,28 +17,24 @@ using System.Windows.Shapes;
 namespace DogHouse.PageList
 {
     /// <summary>
-    /// Логика взаимодействия для AdminPage.xaml
+    /// Логика взаимодействия для SickPage.xaml
     /// </summary>
-    public partial class AdminPage : Page
+    public partial class SickPage : Page
     {
-        public AdminPage()
+        public SickPage()
         {
             InitializeComponent();
+            SickLV.ItemsSource = DBConnection.DogHome1Entities.Survey.ToList();
         }
 
-        private void VolyerBTN_Click(object sender, RoutedEventArgs e)
+        private void BackBTN_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new VoluerPage());
+            NavigationService.Navigate(new AdminPage());
         }
 
-        private void SickBTN_Click(object sender, RoutedEventArgs e)
+        private void AddSickBTN_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new SickPage());
-        }
-
-        private void EmployeeBTN_Click(object sender, RoutedEventArgs e)
-        {
-
+            NavigationService.Navigate(new AddSickPAge());
         }
     }
 }

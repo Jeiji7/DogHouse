@@ -132,7 +132,7 @@
                 </Setter.Value>
             </Setter>
         </Style>-->
-        <Style TargetType="ListView">
+        <!--<Style TargetType="ListView">
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontFamily" Value="Arial"/>
@@ -155,7 +155,7 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-        </Style>
+        </Style>-->
         <Style TargetType="Button">
             <Setter Property="Background" Value="#3CB371"/>
             <Setter Property="Foreground" Value="White"/>

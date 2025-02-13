@@ -1,0 +1,33 @@
+﻿<Page x:Class="DogHouse.PageList.AddSickPAge"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DogHouse.PageList"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddSickPAge">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="79*"/>
+        </Grid.RowDefinitions>
+
+
+        <TextBlock Text="Добавить новую болезнь" Grid.Row="0" Style="{DynamicResource H1}"/>
+        <TextBlock Text="Номер собаки" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="100 0 0 0"/>
+        <ComboBox x:Name="DogNumberCB" Grid.Row="1" DisplayMemberPath="Number" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="250" Margin="120 0 0 0"/>
+        <TextBlock Text="Болезнь" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="100 0 0 0"/>
+        <TextBox x:Name="SickTB" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="120 0 0 0" Height="40" Width="350"/>
+        <TextBlock Text="Дополнение" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="100 0 0 0"/>
+        <TextBox x:Name="CommentTB" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="170 0 0 0" Height="40" Width="350"/>
+        
+
+        <Button x:Name="AddSickBTN" Width="250" Height="40" Content="Сохранить" Grid.Row="4" Click="AddSickBTN_Click"/>
+        <Button x:Name="BackBTN" Width="120" Height="40" Content="Назад" Grid.Row="0" HorizontalAlignment="Left" Margin="10 0 0 0" Click="BackBTN_Click"/>
+    </Grid>
+</Page>

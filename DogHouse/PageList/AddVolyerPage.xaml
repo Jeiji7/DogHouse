@@ -1,0 +1,26 @@
+﻿<Page x:Class="DogHouse.PageList.AddVolyerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DogHouse.PageList"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddVolyerPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="259*"/>
+            <RowDefinition Height="125*"/>
+        </Grid.RowDefinitions>
+
+
+        <TextBlock Text="Добавить новый вольер" Grid.Row="0" Style="{DynamicResource H1}"/>
+        <TextBlock Text="Название" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="100 0 0 0"/>
+        <TextBox x:Name="NameVolyerTB" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="350" Margin="100 0 0 0"/>
+
+        <Button x:Name="AddVolyerBTN" Width="250" Height="40" Content="Сохранить" Grid.Row="2" Click="AddVolyerBTN_Click"/>
+        <Button x:Name="BackBTN" Width="120" Height="40" Content="Назад" Grid.Row="0" HorizontalAlignment="Left" Margin="10 0 0 0" Click="BackBTN_Click"/>
+    </Grid>
+</Page>
