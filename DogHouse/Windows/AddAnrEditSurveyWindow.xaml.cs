@@ -1,5 +1,4 @@
-﻿using DogHouse.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,24 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DogHouse.PageList
+namespace DogHouse.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для AdminPage.xaml
+    /// Логика взаимодействия для AddAnrEditSurveyWindow.xaml
     /// </summary>
-    public partial class AdminPage : Page
+    public partial class AddAnrEditSurveyWindow : Window
     {
-        public AdminPage()
+        public AddAnrEditSurveyWindow()
         {
             InitializeComponent();
-        }
-
-        private void SurveyBtn_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new SurveyPage());
         }
     }
 }
