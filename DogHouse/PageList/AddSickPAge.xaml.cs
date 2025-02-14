@@ -22,13 +22,13 @@ namespace DogHouse.PageList
     /// </summary>
     public partial class AddSickPAge : Page
     {
-        private Survey survey;
-        public static List<Dog> dog { get; set; }
+        private Survey survey = new Survey();
+        //public static List<Dog> dog { get; set; }
 
         public AddSickPAge()
         {
             InitializeComponent();
-            DogNumberCB.ItemsSource = dog.ToList();
+            DogNumberCB.ItemsSource = DBConnection.DogHome1Entities.Dog.ToList();
             DogNumberCB.DisplayMemberPath = "Number";
 
         }
@@ -40,14 +40,21 @@ namespace DogHouse.PageList
 
         private void AddSickBTN_Click(object sender, RoutedEventArgs e)
         {
-            survey.IdDog = DogNumberCB.SelectedIndex + 1;
-            survey.Illness = SickTB.Text;
-            survey.Comment = CommentTB.Text;
- 
-            DBConnection.DogHome1Entities.Survey.Add(survey);
-            DBConnection.DogHome1Entities.SaveChanges();
-            MessageBox.Show("Данные успешно добавлены");
-            NavigationService.Navigate(new SickPage());
+            try
+            {
+                survey.IdDog = DogNumberCB.SelectedIndex + 1;
+                survey.Illness = SickTB.Text;
+                survey.Comment = CommentTB.Text;
+
+                DBConnection.DogHome1Entities.Survey.Add(survey);
+                DBConnection.DogHome1Entities.SaveChanges();
+                MessageBox.Show("Данные успешно добавлены");
+                NavigationService.Navigate(new SickPage());
+            }
+            catch
+            {
+                MessageBox.Show("Заполни все строки!");
+            }
         }
     }
 }

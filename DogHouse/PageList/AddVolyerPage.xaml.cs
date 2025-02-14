@@ -22,7 +22,7 @@ namespace DogHouse.PageList
     /// </summary>
     public partial class AddVolyerPage : Page
     {
-        private TypeAviary typeAviary;
+        private TypeAviary typeAviary = new TypeAviary();
         public AddVolyerPage()
         {
             InitializeComponent();

@@ -16,28 +16,23 @@ using System.Windows.Shapes;
 namespace DogHouse.PageList
 {
     /// <summary>
-    /// Логика взаимодействия для AdminPage.xaml
+    /// Логика взаимодействия для EditEmployeePage.xaml
     /// </summary>
-    public partial class AdminPage : Page
+    public partial class EditEmployeePage : Page
     {
-        public AdminPage()
+        public EditEmployeePage()
         {
             InitializeComponent();
         }
 
-        private void VolyerBTN_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new VoluerPage());
-        }
-
-        private void SickBTN_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new SickPage());
-        }
-
-        private void EmployeeBTN_Click(object sender, RoutedEventArgs e)
+        private void BackBTN_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new EmployeePage());
+        }
+
+        private void EditEmployeeBTN_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
