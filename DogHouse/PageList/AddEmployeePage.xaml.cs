@@ -26,7 +26,7 @@ namespace DogHouse.PageList
         public AddEmployeePage()
         {
             InitializeComponent();
-            TypeCB.ItemsSource = DB.DBConnection.DogHome1Entities.TypeEmployee.ToList();
+            TypeCB.ItemsSource = App.db.TypeEmployee.ToList();
             TypeCB.DisplayMemberPath = "Name";
 
         }
@@ -44,8 +44,8 @@ namespace DogHouse.PageList
             employee.FirstName = NameTB.Text;
             employee.Name = SurnameTB.Text;
 
-            DBConnection.DogHome1Entities.Employee.Add(employee);
-            DBConnection.DogHome1Entities.SaveChanges();
+            App.db.Employee.Add(employee);
+            App.db.SaveChanges();
             MessageBox.Show("Данные успешно добавлены");
             NavigationService.Navigate(new EmployeePage());
             }

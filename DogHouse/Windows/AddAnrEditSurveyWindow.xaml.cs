@@ -31,12 +31,12 @@ namespace DogHouse.Windows
         public AddAnrEditSurveyWindow(Survey infoSurvey)
         {
             InitializeComponent();
-            employees = new ObservableCollection<Employee>(DbConnections.homeEntities.Employee.ToList());  
+            employees = new ObservableCollection<Employee>(App.db.Employee.ToList());  
             EmployeeCb.ItemsSource = employees;
-            dog = new ObservableCollection<Dog>(DbConnections.homeEntities.Dog.ToList());
+            dog = new ObservableCollection<Dog>(App.db.Dog.ToList());
             DogeCb.ItemsSource = dog;
             DogeCb.DisplayMemberPath = "Number";
-            statusSurveys = new ObservableCollection<StatusSurvey>(DbConnections.homeEntities.StatusSurvey.ToList());
+            statusSurveys = new ObservableCollection<StatusSurvey>(App.db.StatusSurvey.ToList());
             StatusCb.ItemsSource = statusSurveys;
             StatusCb.DisplayMemberPath = "Name";
             if (App.editOrAdd == false)
@@ -78,8 +78,8 @@ namespace DogHouse.Windows
                 addSurvey.IdDog = (DogeCb.SelectedItem as Dog).ID;
                 addSurvey.IdDoctor = (EmployeeCb.SelectedItem as Employee).ID;
                 addSurvey.IdStatus = (StatusCb.SelectedItem as StatusSurvey).ID;
-                DbConnections.homeEntities.Survey.Add(addSurvey);
-                DbConnections.homeEntities.SaveChanges();
+                App.db.Survey.Add(addSurvey);
+                App.db.SaveChanges();
                 MessageBox.Show("Success!");
                 SurveyUpdated?.Invoke();
 
@@ -100,7 +100,7 @@ namespace DogHouse.Windows
                 editSurvey.Comment = CommentTb.Text;
                 editSurvey.IdDoctor = (EmployeeCb.SelectedItem as Employee).ID;
                 editSurvey.IdStatus = (StatusCb.SelectedItem as StatusSurvey).ID;
-                DbConnections.homeEntities.SaveChanges();
+                App.db.SaveChanges();
                 MessageBox.Show("Success!");
                 SurveyUpdated?.Invoke();
 

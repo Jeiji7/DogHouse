@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DogHouse.DB;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -14,5 +15,6 @@ namespace DogHouse
     public partial class App : Application
     {
         public static bool editOrAdd = false;
+        public static DogHomeEntities db = new DogHomeEntities();
     }
 }

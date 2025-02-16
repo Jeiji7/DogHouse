@@ -34,8 +34,8 @@ namespace DogHouse.PageList
         {
             typeAviary.Name = NameVolyerTB.Text;
 
-            DBConnection.DogHome1Entities.TypeAviary.Add(typeAviary);
-            DBConnection.DogHome1Entities.SaveChanges();
+            App.db.TypeAviary.Add(typeAviary);
+            App.db.SaveChanges();
             MessageBox.Show("Данные успешно добавлены");
             NavigationService.Navigate(new VoluerPage());
         }

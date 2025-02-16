@@ -24,7 +24,7 @@ namespace DogHouse.PageList
         public SickPage()
         {
             InitializeComponent();
-            SickLV.ItemsSource = DBConnection.DogHome1Entities.Survey.ToList();
+            SickLV.ItemsSource = App.db.Survey.ToList();
         }
 
         private void BackBTN_Click(object sender, RoutedEventArgs e)

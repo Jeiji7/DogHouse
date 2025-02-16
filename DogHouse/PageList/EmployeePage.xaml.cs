@@ -24,7 +24,7 @@ namespace DogHouse.PageList
         public EmployeePage()
         {
             InitializeComponent();
-            EmployeeLV.ItemsSource = DBConnection.DogHome1Entities.Employee.ToList();
+            EmployeeLV.ItemsSource = App.db.Employee.ToList();
         }
 
         private void BackBTN_Click(object sender, RoutedEventArgs e)
@@ -53,7 +53,7 @@ namespace DogHouse.PageList
             //else
             //{
             //    MessageBox.Show("Вы не выбрали заявку для изменения");
-            }
+            
         }
     }
 }

@@ -28,7 +28,7 @@ namespace DogHouse.PageList
         public AddSickPAge()
         {
             InitializeComponent();
-            DogNumberCB.ItemsSource = DBConnection.DogHome1Entities.Dog.ToList();
+            DogNumberCB.ItemsSource = App.db.Dog.ToList();
             DogNumberCB.DisplayMemberPath = "Number";
 
         }
@@ -46,8 +46,8 @@ namespace DogHouse.PageList
                 survey.Illness = SickTB.Text;
                 survey.Comment = CommentTB.Text;
 
-                DBConnection.DogHome1Entities.Survey.Add(survey);
-                DBConnection.DogHome1Entities.SaveChanges();
+                App.db.Survey.Add(survey);
+                App.db.SaveChanges();
                 MessageBox.Show("Данные успешно добавлены");
                 NavigationService.Navigate(new SickPage());
             }

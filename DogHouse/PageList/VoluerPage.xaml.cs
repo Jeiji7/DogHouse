@@ -25,7 +25,7 @@ namespace DogHouse.PageList
         public VoluerPage()
         {
             InitializeComponent();
-            VolyerLV.ItemsSource = DBConnection.DogHome1Entities.TypeAviary.ToList();
+            VolyerLV.ItemsSource = App.db.TypeAviary.ToList();
 
         }
 

@@ -28,7 +28,7 @@ namespace DogHouse.Pages
         public SurveyPage()
         {
             InitializeComponent();
-            surveys = new ObservableCollection<Survey>(DbConnections.homeEntities.Survey.ToList());
+            surveys = new ObservableCollection<Survey>(App.db.Survey.ToList());
             SurveyLv.ItemsSource = surveys;
 
         }
@@ -61,7 +61,7 @@ namespace DogHouse.Pages
         }
         private void LoadSurveyList()
         {
-            surveys = new ObservableCollection<Survey>(DbConnections.homeEntities.Survey.ToList());
+            surveys = new ObservableCollection<Survey>(App.db.Survey.ToList());
             SurveyLv.ItemsSource = surveys;
         }
     }
