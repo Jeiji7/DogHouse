@@ -14,9 +14,15 @@
             <RowDefinition Height="306*"/>
             <RowDefinition Height="79*"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
 
-
-        <TextBlock Text="Типы вольеров" Grid.Row="0" Style="{DynamicResource H1}"/>
+        <TextBlock Text="Типы вольеров" Grid.Row="0" Grid.ColumnSpan="2" Style="{DynamicResource H1}"/>
+        <StackPanel Grid.Row="1" Grid.Column="1" >
+            <ComboBox Margin="20"></ComboBox>
+        </StackPanel>
         <StackPanel Grid.Row="1">
             <ListView x:Name="VolyerLV" Height="300" HorizontalAlignment="Center">
                 <ListView.View>
