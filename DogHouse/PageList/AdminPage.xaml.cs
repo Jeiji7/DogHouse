@@ -26,9 +26,20 @@ namespace DogHouse.PageList
             InitializeComponent();
         }
 
-        private void SurveyBtn_Click(object sender, RoutedEventArgs e)
+        private void VolyerBTN_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new SurveyPage());
+            NavigationService.Navigate(new VoluerPage());
+        }
+
+        private void SickBTN_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new SickPage());
+        }
+
+        private void EmployeeBTN_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new EmployeePage());
+
         }
     }
 }
