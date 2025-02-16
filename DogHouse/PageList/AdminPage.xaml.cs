@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DogHouse.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,6 +39,7 @@ namespace DogHouse.PageList
         private void EmployeeBTN_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new EmployeePage());
+
         }
     }
 }
