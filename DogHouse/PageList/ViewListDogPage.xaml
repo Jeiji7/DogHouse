@@ -16,6 +16,7 @@
         </Grid.RowDefinitions>
         <TextBlock Style="{DynamicResource H1}">Список собак</TextBlock>
         <StackPanel HorizontalAlignment="Center" Grid.Row="2" Orientation="Horizontal"> 
+            <Button Width="160" Click="Back_Click">Назад</Button>
             <Button Click="Button_AddDogs_Click">Добавить</Button>
             <Button Background="Violet" Click="Button_EditDogs_Click">Изменить</Button>
         </StackPanel>
@@ -23,7 +24,23 @@
             <ListView.View>
                 <GridView>
                     <GridView.Columns>
-                        <GridViewColumn Header="Имя собаки" Width="200" DisplayMemberBinding="{Binding Number}"></GridViewColumn>
+                        <GridViewColumn Header="Имя собаки" Width="190" DisplayMemberBinding="{Binding Number}"></GridViewColumn>
+                        <GridViewColumn Header="Пол" Width="140" DisplayMemberBinding="{Binding Gender.Name}"></GridViewColumn>
+                        <GridViewColumn Header="Возраст" Width="160" DisplayMemberBinding="{Binding AboutAge}"></GridViewColumn>
+                        <GridViewColumn Header="Жив?" Width="130">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox IsChecked="{Binding Path=IsDie, Mode=TwoWay}"></CheckBox>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Имеется?" Width="170">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox IsChecked="{Binding Path=IsGive, Mode=TwoWay}"></CheckBox>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
                     </GridView.Columns>
                 </GridView>
             </ListView.View>

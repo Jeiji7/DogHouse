@@ -53,7 +53,7 @@ namespace DogHouse.PageList
             }
             catch
             {
-                MessageBox.Show("Заполни все строки!");
+                MessageBox.Show("Заполни все поля!");
             }
         }
     }

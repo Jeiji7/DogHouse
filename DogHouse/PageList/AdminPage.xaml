@@ -27,7 +27,7 @@
         <Button Grid.Row="2" Height="40" Width="220" Content="Болезнь" Click="SickBTN_Click"></Button>
         <Button Grid.Row="3" Height="40" Width="220" Content="Сотрудники" Click="EmployeeBTN_Click"></Button>
         <Button Grid.Row="4" Height="40" Width="220" Content="Список собак" Click="ListDogs_Click"></Button>
-        <Button Grid.Row="5" Height="40" Width="220" Content="Приём" ></Button>
+        <Button Grid.Row="5" Height="40" Width="220" Content="Назад" Click="Back_Click" ></Button>
         
     </Grid>
 </Page>

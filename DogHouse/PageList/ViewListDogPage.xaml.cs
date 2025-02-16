@@ -43,5 +43,10 @@ namespace DogHouse.PageList
                 MessageBox.Show("Вы не выбрали собаку для редактирования!!!");
             }
         }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new PageList.AdminPage());
+        }
     }
 }

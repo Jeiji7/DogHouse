@@ -23,7 +23,10 @@
                 <TextBlock>Описание</TextBlock>
             </StackPanel>
             <StackPanel Margin="5 0 5 0">
-                <TextBox Width="150"></TextBox>
+                <TextBox Width="150" x:Name="NumberDogTB"></TextBox>
+                <TextBox Width="150" x:Name="HeightDogTB"></TextBox>
+                <TextBox Width="150" x:Name="WeightDogTB"></TextBox>
+                <TextBox Width="150" Height="80" x:Name="DiscriptionDogTB"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Vertical">
                 <TextBlock>Тип вольера</TextBlock>
@@ -32,8 +35,15 @@
                 <TextBlock>Телефон</TextBlock>
             </StackPanel>
             <StackPanel Margin="5 0 5 0">
-                <TextBox Width="150"></TextBox>
+                <ComboBox Height="50" x:Name="TypeVolyerCB" DisplayMemberPath="Name"></ComboBox>
+                <TextBox Width="150" x:Name="AgeDogTB"></TextBox>
+                <ComboBox Height="50" x:Name="GenderDogTB" DisplayMemberPath="Name"></ComboBox>
+                <TextBox Width="150" x:Name="PhoneNumberDogTB"></TextBox>
             </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="2">
+            <Button  Click="Back_Click" Width="180">Назад</Button>
+            <Button  Click="Save_Dog_Click">Сохранить</Button>
         </StackPanel>
     </Grid>
 </Page>

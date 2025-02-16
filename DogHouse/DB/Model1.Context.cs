@@ -33,5 +33,6 @@ namespace DogHouse.DB
         public virtual DbSet<Survey> Survey { get; set; }
         public virtual DbSet<TypeAviary> TypeAviary { get; set; }
         public virtual DbSet<TypeEmployee> TypeEmployee { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

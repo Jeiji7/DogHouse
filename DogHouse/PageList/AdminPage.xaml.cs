@@ -46,5 +46,10 @@ namespace DogHouse.PageList
         {
             NavigationService.Navigate(new PageList.ViewListDogPage());
         }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Pages.AuthorizationPage());
+        }
     }
 }

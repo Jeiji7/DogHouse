@@ -26,6 +26,8 @@
             <Setter Property="Background" Value="Azure"/>
         </Style>
         <Style TargetType="TextBox">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Margin" Value="0 5"/>
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontFamily" Value="Arial"/>

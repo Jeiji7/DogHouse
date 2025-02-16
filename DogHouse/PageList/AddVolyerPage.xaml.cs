@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -32,6 +33,11 @@ namespace DogHouse.PageList
 
         private void AddVolyerBTN_Click(object sender, RoutedEventArgs e)
         {
+            if (NameVolyerTB.Text == null)
+            {
+                MessageBox.Show("Вы не указали имя вольера!!!");
+                return;
+            }
             typeAviary.Name = NameVolyerTB.Text;
 
             App.db.TypeAviary.Add(typeAviary);
