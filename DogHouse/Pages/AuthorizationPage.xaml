@@ -8,7 +8,24 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AuthorizationPage">
 
-    <Grid Background="White">
-        <TextBlock Width="100" Height="50"  Style="{DynamicResource TextBl}">jsakdha</TextBlock>
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" Margin="20">
+            <TextBlock Style="{DynamicResource H1}">Авторизация</TextBlock>
+            
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="20 0 45 0">Логин: </TextBlock>
+                <TextBox Width="150" x:Name="LoginTb"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 20">
+                <TextBlock Margin="20 0">Пароль:</TextBlock>
+                <TextBox Width="150" x:Name="PassTb"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Click="Enter_Click">Войти</Button>
+                <Button Click="Guest_Click">Гость</Button>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>
