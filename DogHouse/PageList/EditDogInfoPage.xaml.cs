@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DogHouse.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,11 @@ namespace DogHouse.PageList
     /// </summary>
     public partial class EditDogInfoPage : Page
     {
-        public EditDogInfoPage()
+        private Dog _newDog;
+        public EditDogInfoPage(Dog newDog)
         {
             InitializeComponent();
+            _newDog = newDog;
         }
     }
 }

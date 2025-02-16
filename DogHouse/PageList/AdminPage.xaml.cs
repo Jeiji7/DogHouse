@@ -41,5 +41,10 @@ namespace DogHouse.PageList
             NavigationService.Navigate(new EmployeePage());
 
         }
+
+        private void ListDogs_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new PageList.ViewListDogPage());
+        }
     }
 }

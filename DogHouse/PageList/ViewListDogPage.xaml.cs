@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DogHouse.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,24 @@ namespace DogHouse.PageList
         public ViewListDogPage()
         {
             InitializeComponent();
+            DogsListLV.ItemsSource = App.db.Dog.ToList();
+        }
+        private void Button_AddDogs_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new PageList.AddDogInfoPage());
+        }
+
+        private void Button_EditDogs_Click(object sender, RoutedEventArgs e)
+        {
+            if(DogsListLV.SelectedItem != null)
+            {
+                var item = (Dog)DogsListLV.SelectedItem;
+                NavigationService.Navigate(new PageList.EditDogInfoPage(item));
+            }
+            else
+            {
+                MessageBox.Show("Вы не выбрали собаку для редактирования!!!");
+            }
         }
     }
 }

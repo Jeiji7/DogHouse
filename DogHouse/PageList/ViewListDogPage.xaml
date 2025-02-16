@@ -9,6 +9,24 @@
       Title="ViewListDogPage">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Style="{DynamicResource H1}">Список собак</TextBlock>
+        <StackPanel HorizontalAlignment="Center" Grid.Row="2" Orientation="Horizontal"> 
+            <Button Click="Button_AddDogs_Click">Добавить</Button>
+            <Button Background="Violet" Click="Button_EditDogs_Click">Изменить</Button>
+        </StackPanel>
+        <ListView x:Name="DogsListLV" Grid.Row="1">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Имя собаки" Width="200" DisplayMemberBinding="{Binding Number}"></GridViewColumn>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Page>

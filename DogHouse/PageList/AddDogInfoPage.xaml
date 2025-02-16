@@ -15,6 +15,25 @@
             <RowDefinition Height="15*"/>
         </Grid.RowDefinitions>
         <TextBlock Style="{DynamicResource H1}">Добавление информации о собаке</TextBlock>
-
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <StackPanel Orientation="Vertical">
+                <TextBlock>Номер собаки</TextBlock>
+                <TextBlock>Высота</TextBlock>
+                <TextBlock>Ширина</TextBlock>
+                <TextBlock>Описание</TextBlock>
+            </StackPanel>
+            <StackPanel Margin="5 0 5 0">
+                <TextBox Width="150"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <TextBlock>Тип вольера</TextBlock>
+                <TextBlock>Возраст</TextBlock>
+                <TextBlock>Пол</TextBlock>
+                <TextBlock>Телефон</TextBlock>
+            </StackPanel>
+            <StackPanel Margin="5 0 5 0">
+                <TextBox Width="150"></TextBox>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>
