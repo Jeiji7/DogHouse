@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DogHouse.Pages
+namespace DogHouse.PageList
 {
     /// <summary>
-    /// Логика взаимодействия для EditAnimalInfoPage.xaml
+    /// Логика взаимодействия для AddDogInfoPage.xaml
     /// </summary>
-    public partial class EditAnimalInfoPage : Page
+    public partial class AddDogInfoPage : Page
     {
-        public EditAnimalInfoPage()
+        public AddDogInfoPage()
         {
             InitializeComponent();
         }
