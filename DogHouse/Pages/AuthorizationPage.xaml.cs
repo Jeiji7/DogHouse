@@ -1,5 +1,6 @@
 ﻿using DogHouse.DB;
 using DogHouse.PageList;
+using DogHouse.Pagess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,7 +57,7 @@ namespace DogHouse.Pages
 
         private void Guest_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new MainMenuPage());
         }
     }
 }

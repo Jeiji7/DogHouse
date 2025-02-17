@@ -16,5 +16,7 @@ namespace DogHouse
     {
         public static bool editOrAdd = false;
         public static DogHomeEntities db = new DogHomeEntities();
+        public static Dog ContextDog { get; set; }
+       
     }
 }
