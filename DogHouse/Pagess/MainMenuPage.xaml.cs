@@ -22,7 +22,7 @@ namespace DogHouse.Pagess
     {
         public MainMenuPage()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
 
         private void OpenDogListBtn_Click(object sender, RoutedEventArgs e)
