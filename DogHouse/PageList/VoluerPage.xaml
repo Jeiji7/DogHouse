@@ -20,8 +20,9 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Text="Типы вольеров" Grid.Row="0" Grid.ColumnSpan="2" Style="{DynamicResource H1}"/>
-        <StackPanel Grid.Row="1" Grid.Column="1" >
-            <ComboBox Margin="20"></ComboBox>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+            <ComboBox Margin="20" x:Name="DogCb"></ComboBox>
+            <Button Content="Добавить собаку в" Click="AddDogInVoluer_Click"/>
         </StackPanel>
         <StackPanel Grid.Row="1">
             <ListView x:Name="VolyerLV" Height="300" HorizontalAlignment="Center">

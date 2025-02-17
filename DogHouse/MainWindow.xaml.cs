@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DogHouse.Pages;
 
 namespace DogHouse
 {
@@ -23,7 +24,7 @@ namespace DogHouse
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new PageList.AdminPage());
+            MainFrame.Navigate(new AuthorizationPage());
         }
     }
 }

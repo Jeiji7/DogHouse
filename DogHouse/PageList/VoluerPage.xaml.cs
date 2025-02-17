@@ -21,11 +21,12 @@ namespace DogHouse.PageList
     /// </summary>
     public partial class VoluerPage : Page
     {
-        private TypeAviary typeAviary;
         public VoluerPage()
         {
             InitializeComponent();
             VolyerLV.ItemsSource = App.db.TypeAviary.ToList();
+            DogCb.ItemsSource = App.db.Dog.ToList();
+            DogCb.DisplayMemberPath = "Number";
 
         }
 
@@ -37,6 +38,25 @@ namespace DogHouse.PageList
         private void BackBTN_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new AdminPage());
+        }
+
+        private void AddDogInVoluer_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+            TypeAviary asd = (TypeAviary)VolyerLV.SelectedItem;
+            int idType = DogCb.SelectedIndex + 1;
+            string nameType = App.db.TypeAviary.FirstOrDefault(x => x.Name == asd.Name).Name;
+            int qwe = App.db.Aviary.FirstOrDefault(x => x.IdType == asd.ID).ID;
+            Dog dog = App.db.Dog.FirstOrDefault(x => x.ID == idType);
+            dog.IdAviary = qwe;
+            App.db.SaveChanges();
+            MessageBox.Show("Собака добавлена в вольер!");
+            }
+            catch
+            {
+                MessageBox.Show("черт, ошибка!");
+            }
         }
     }
 }
