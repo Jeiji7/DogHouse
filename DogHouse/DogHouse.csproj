@@ -67,6 +67,7 @@
     <Compile Include="DB\Aviary.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DB\Dbconnections.cs" />
     <Compile Include="DB\Dog.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -114,6 +115,18 @@
     </Compile>
     <Compile Include="PageList\ViewListDogPage.xaml.cs">
       <DependentUpon>ViewListDogPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pagess\AboutDogPage.xaml.cs">
+      <DependentUpon>AboutDogPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pagess\ContactPage.xaml.cs">
+      <DependentUpon>ContactPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pagess\MainMenuPage.xaml.cs">
+      <DependentUpon>MainMenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pagess\SearchDogsPage.xaml.cs">
+      <DependentUpon>SearchDogsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\AddAnrEditSurveyWindow.xaml.cs">
       <DependentUpon>AddAnrEditSurveyWindow.xaml</DependentUpon>
@@ -171,6 +184,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PageList\VoluerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pagess\AboutDogPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pagess\ContactPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pagess\MainMenuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pagess\SearchDogsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -266,6 +295,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Photoss\no-image.jpg" />
     <Resource Include="Logo\dogLogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

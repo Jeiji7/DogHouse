@@ -31,8 +31,8 @@ namespace DogHouse.DB
         public virtual DbSet<Gender> Gender { get; set; }
         public virtual DbSet<StatusSurvey> StatusSurvey { get; set; }
         public virtual DbSet<Survey> Survey { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TypeAviary> TypeAviary { get; set; }
         public virtual DbSet<TypeEmployee> TypeEmployee { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

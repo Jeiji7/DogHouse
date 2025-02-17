@@ -31,7 +31,7 @@ namespace DogHouse.DB
         public Nullable<bool> IsDie { get; set; }
         public Nullable<bool> IsGive { get; set; }
         public string PhoneNumber { get; set; }
-        public byte[] Photo { get; set; }
+        public string Photo { get; set; }
     
         public virtual Aviary Aviary { get; set; }
         public virtual Gender Gender { get; set; }
