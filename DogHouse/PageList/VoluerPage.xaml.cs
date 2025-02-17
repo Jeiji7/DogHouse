@@ -44,7 +44,6 @@ namespace DogHouse.PageList
         {
             try
             {
-
             TypeAviary asd = (TypeAviary)VolyerLV.SelectedItem;
             int idType = DogCb.SelectedIndex + 1;
             string nameType = App.db.TypeAviary.FirstOrDefault(x => x.Name == asd.Name).Name;
