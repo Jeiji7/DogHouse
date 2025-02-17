@@ -25,7 +25,6 @@ namespace DogHouse.DB
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Aviary> Aviary { get; set; }
         public virtual DbSet<Dog> Dog { get; set; }
         public virtual DbSet<Employee> Employee { get; set; }
         public virtual DbSet<Gender> Gender { get; set; }

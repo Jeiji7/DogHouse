@@ -10,8 +10,8 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="65*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="70*"/>
             <RowDefinition Height="15*"/>
         </Grid.RowDefinitions>
         <TextBlock Style="{DynamicResource H1}">Редактирование информации собаки</TextBlock>

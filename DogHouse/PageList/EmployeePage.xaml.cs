@@ -44,16 +44,15 @@ namespace DogHouse.PageList
 
         private void EditEmployeeBTN_Click(object sender, RoutedEventArgs e)
         {
-            //if (EmployeeLV.SelectedIndex != -1)
-            //{
-            //    var SelectEmp = (Employee)EmployeeLV.SelectedItem;
-            //    EditEmployeePage editPage = new EditEmployeePage(SelectEmp);
-            //    NavigationService.Navigate(editPage);
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Вы не выбрали заявку для изменения");
-            
+            if (EmployeeLV.SelectedItem != null)
+            {
+                var SelectEmp = (Employee)EmployeeLV.SelectedItem;
+                NavigationService.Navigate(new PageList.EditEmployeePage(SelectEmp));
+            }
+            else
+            {
+                MessageBox.Show("Вы не выбрали заявку для изменения");
+            }
         }
     }
 }

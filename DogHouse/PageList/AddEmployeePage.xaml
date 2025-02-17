@@ -19,7 +19,7 @@
 
 
         <TextBlock Text="Добавить нового сотрудника" Grid.Row="0" Style="{DynamicResource H1}" Margin="70 0 0 0"/>
-        <TextBlock Text="Имя" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="250 0 0 0"/>
+        <TextBlock Text="Имя" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="120 0 0 0"/>
         <TextBox x:Name="NameTB" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="350" Margin="220 0 0 0"/>
         <TextBlock Text="Фамилия" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="120 0 0 0"/>
         <TextBox x:Name="SurnameTB" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="220 0 0 0" Height="40" Width="350"/>

@@ -35,7 +35,7 @@ namespace DogHouse.Pagess
             }
             else
             {
-                ClientImg.Source = new BitmapImage(new Uri(@"C:\\Users\\KJI1ZERO\\source\\repos\\dogs\\dogs\\Photoss\\no-image.jpg", UriKind.Absolute));
+                ClientImg.Source = new BitmapImage(new Uri("pack://application:,,,/Photoss/no-image.jpg", UriKind.Absolute));
             }
             NumberTb.Text = contextdog.Number;
             GenderTb.Text = contextdog.Gender.Name;

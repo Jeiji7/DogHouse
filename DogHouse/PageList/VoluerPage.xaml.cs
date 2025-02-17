@@ -45,11 +45,8 @@ namespace DogHouse.PageList
             try
             {
             TypeAviary asd = (TypeAviary)VolyerLV.SelectedItem;
-            int idType = DogCb.SelectedIndex + 1;
-            string nameType = App.db.TypeAviary.FirstOrDefault(x => x.Name == asd.Name).Name;
-            int qwe = App.db.Aviary.FirstOrDefault(x => x.IdType == asd.ID).ID;
-            Dog dog = App.db.Dog.FirstOrDefault(x => x.ID == idType);
-            dog.IdAviary = qwe;
+            Dog dog = (Dog)DogCb.SelectedItem;
+            dog.IdAviary = asd.ID;
             App.db.SaveChanges();
             MessageBox.Show("Собака добавлена в вольер!");
             }

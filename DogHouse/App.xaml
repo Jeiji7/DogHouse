@@ -16,10 +16,10 @@
         <Style TargetType="TextBlock" >
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="FontSize" Value="32"/>
+            <Setter Property="FontSize" Value="28"/>
             <Setter Property="FontFamily" Value="Arial"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="Margin" Value="0 5"/>
+            <Setter Property="Margin" Value="5 8.5"/>
         </Style>
 
         <Style TargetType="Grid">

@@ -17,8 +17,7 @@
 
 
         <TextBlock Text="Болезни" Grid.Row="0" Style="{DynamicResource H1}"/>
-        <StackPanel Grid.Row="1">
-            <ListView x:Name="SickLV" HorizontalAlignment="Center">
+            <ListView Grid.Row="1" x:Name="SickLV" HorizontalAlignment="Center">
                 <ListView.View>
                     <GridView>
                         <GridView.Columns>
@@ -29,7 +28,6 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-        </StackPanel>
 
         <Button x:Name="AddSickBTN" Grid.Row="3" Height="40" Width="350" Content="Добавить болезнь" Click="AddSickBTN_Click"/>
         <Button x:Name="BackBTN" Width="120" Height="40" Content="Назад" Grid.Row="0" HorizontalAlignment="Left" Margin="10 0 0 0" Click="BackBTN_Click"/>

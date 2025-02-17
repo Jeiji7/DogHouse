@@ -30,14 +30,14 @@
                         <GridViewColumn Header="Жив?" Width="130">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <CheckBox IsChecked="{Binding Path=IsDie, Mode=TwoWay}"></CheckBox>
+                                    <CheckBox IsChecked="{Binding Path=IsDie, Mode=TwoWay}" IsEnabled="False"></CheckBox>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
                         <GridViewColumn Header="Имеется?" Width="170">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <CheckBox IsChecked="{Binding Path=IsGive, Mode=TwoWay}"></CheckBox>
+                                    <CheckBox IsChecked="{Binding Path=IsGive, Mode=TwoWay}" IsEnabled="False"></CheckBox>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>

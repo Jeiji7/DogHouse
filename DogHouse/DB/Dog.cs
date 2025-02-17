@@ -33,8 +33,8 @@ namespace DogHouse.DB
         public string PhoneNumber { get; set; }
         public string Photo { get; set; }
     
-        public virtual Aviary Aviary { get; set; }
         public virtual Gender Gender { get; set; }
+        public virtual TypeAviary TypeAviary { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Survey> Survey { get; set; }
     }
