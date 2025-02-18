@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DogHouse.Pagess"
       mc:Ignorable="d"
-      Title="AboutDogPage" Height="694" Width="1096">
+      Title="AboutDogPage" Height="400" Width="850">
 
     <Grid>
         <Button Name="BackBtn"
@@ -15,43 +15,60 @@
  Click="BackBtn_Click"
  HorizontalAlignment="Left"
  VerticalAlignment="Top"/>
-        <StackPanel Grid.Column="2"
+        <StackPanel
      HorizontalAlignment="Center"
      VerticalAlignment="Center"
-     Margin="20 0 0 0">
+      Height="400">
             <TextBlock Text="Собака"
         HorizontalAlignment="Center"
         FontSize="27"/>
             <StackPanel Height="15"/>
             <Image Name="ClientImg"
-    Width="210"
-    Height="210"/>
-            <StackPanel Height="15"/>
-            <TextBlock HorizontalAlignment="Center">
+    Width="200"
+    Height="200"/>
+            <StackPanel Height="10"/>
+
+            <StackPanel HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+                <TextBlock HorizontalAlignment="Center"
+                       FontSize="20" Margin="0 0 30 0">
  <Run Text="Id собаки:"/>
  <Run Name="NumberTb"/>
-            </TextBlock>
-            <TextBlock TextAlignment="Center">
+                </TextBlock>
+                <TextBlock TextAlignment="Center"
+                        FontSize="20">
  <Run Text="Пол:"/>
  <Run Name="GenderTb"/>
-            </TextBlock>
-            <TextBlock TextAlignment="Center">
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock TextAlignment="Center"
+                        FontSize="20"
+                           Margin=" 0 0 30 0">
  <Run Text="Телефон:"/>
  <Run Name="PhoneTb"/>
-            </TextBlock>
-            <TextBlock TextAlignment="Center">
+                </TextBlock>
+                <TextBlock TextAlignment="Center"
+                        FontSize="20">
  <Run Text="Рост (см):"/>
  <Run Name="HeightTb"/>
-            </TextBlock>
+                </TextBlock>
+            </StackPanel>
 
-            <TextBlock TextAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+            <TextBlock TextAlignment="Center"
+                        FontSize="20"
+                       Margin="0 0 30 0">
  <Run Text="Вес (кг):"/>
  <Run Name="WeightTb"/>
             </TextBlock>
-            <TextBlock TextAlignment="Center">
+            <TextBlock TextAlignment="Center"
+                        FontSize="20">
  <Run Text="Описание:"/>
  <Run Name="DescriptionTb"/>
             </TextBlock>
+            </StackPanel>
             <StackPanel Height="20"/>
 
 

@@ -5,17 +5,21 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DogHouse.Pagess"
       mc:Ignorable="d"
-      Title="SearchDogsPage" Height="506" Width="837">
+      Title="SearchDogsPage" Height="400" Width="800">
 
-    <Grid Margin="0,0,-100,-57">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+          
+        </Grid.RowDefinitions>
         <Button Name="BackBtn"
           Width="120"
-          Margin="30 15 0 0"
+          Margin="30,12,0,0"
           Content="Назад"
           Click="BackBtn_Click"
           HorizontalAlignment="Left"
-          VerticalAlignment="Top"/>
-        <StackPanel HorizontalAlignment="Center">
+          VerticalAlignment="Top" Grid.Row="1"/>
+        <StackPanel HorizontalAlignment="Center"  Grid.Row="1">
             <TextBlock Text="Список собак"
                  FontSize="27"
                  HorizontalAlignment="Center"/>
@@ -31,34 +35,34 @@
             </StackPanel>
             <StackPanel Height="10"/>
             <ListView Name="DogLv"
-                ScrollViewer.CanContentScroll="False"
+                      Height="260"
+                ScrollViewer.VerticalScrollBarVisibility="Auto" 
                 HorizontalContentAlignment="Stretch"
-                Height="300"
-                Width="800"
+               
                 d:ItemsSource="{d:SampleData ItemCount=2}" 
                 SelectionChanged="DogLv_SelectionChanged">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Background="#ffffe1">
-                            <StackPanel Height="20"/>
+                            <StackPanel Height="5"/>
                             <Image Source="{Binding Photo}"
-                             Width="120"
-                             Height="120"/>
-                            <StackPanel Height="10"/>
-                            <TextBlock HorizontalAlignment="Center">
+                             Width="130"
+                             Height="130"/>
+                            <StackPanel Height="5"/>
+                            <TextBlock HorizontalAlignment="Center" FontSize="20">
                              <Run Text="Id собаки"/>
                           <Run Text="{Binding Number}"/>
                             </TextBlock>
-                            <TextBlock HorizontalAlignment="Center">
+                            <TextBlock HorizontalAlignment="Center" FontSize="20">
                              <Run Text="Описание:"/>
                           <Run Text="{Binding Description}"/>
                             </TextBlock>
                             <TextBlock 
-                                 HorizontalAlignment="Center">
+                                 HorizontalAlignment="Center" FontSize="20">
                              <Run Text="Телефон:"/>
                          <Run Text="{Binding PhoneNumber}"/>
                             </TextBlock>
-                            <StackPanel Height="20"/>
+                            <StackPanel Height="5"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
@@ -68,12 +72,8 @@
                     </ItemsPanelTemplate>
                 </ListView.ItemsPanel>
             </ListView>
-            <StackPanel Height="20"/>
-            <Button BorderBrush="Black"
-              Name="AddBtn"
-              HorizontalAlignment="Center"
-              Width="321"
-              Content="Добавить собаку"/>
+            <StackPanel Height="5"/>
+
         </StackPanel>
     </Grid>
 </Page>

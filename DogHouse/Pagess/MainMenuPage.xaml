@@ -9,8 +9,17 @@
       Title="MainMenuPage">
 
     <Grid>
+
+        <Button Name="BackBtn"
+   Width="120"
+   Margin="30 15 0 0"
+   Content="Назад"
+   
+   HorizontalAlignment="Left"
+   VerticalAlignment="Top" Click="BackBtn_Click"/>
+
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Главное меню"
+            <TextBlock Text="Гостевая навигация"
            FontSize="40"
            FontFamily="Tw Cen MT"
            FontWeight="Bold"

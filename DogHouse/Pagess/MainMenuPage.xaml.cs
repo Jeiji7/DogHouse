@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DogHouse.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,6 +34,11 @@ namespace DogHouse.Pagess
         private void OpenContactBtn_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new ContactPage());
+        }
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AuthorizationPage());
         }
     }
 }

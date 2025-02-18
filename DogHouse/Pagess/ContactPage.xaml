@@ -21,18 +21,17 @@ VerticalAlignment="Top" Click="BackBtn_Click"/>
 
         <StackPanel Orientation="Vertical"
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   Margin="20,20,10,20">
-            <TextBlock Text="Контакты" FontSize="25" Foreground="#FF39DAF9" FontWeight="Bold"/>
-            <TextBlock Text="Телефонная служба" Foreground="#FF39DAF9" FontWeight="Bold"/>
-            <TextBlock Text="+7 (123) 456-78-90" Foreground="Black"/>
-            <TextBlock Text="+7 (927) 044-81-00" Foreground="Black"/>
-            <TextBlock Text="+7 (923) 433-33-33" Foreground="Black"/>
-            <TextBlock Text="Часы Работы" Foreground="#FF39DAF9" FontWeight="Bold" Margin="0 10 0 0"/>
-            <TextBlock Text="Пон-Пт: 10:00-19:00" Foreground="Black"/>
-            <TextBlock Text="Выходные: 10:00-17:00" Foreground="Black"/>
-            <TextBlock Text="Адрес" Foreground="#FF39DAF9" FontWeight="Bold" Margin="0 10 0 0"/>
-            <TextBlock Text="г.Казань, Ул.Стадионная 1, д1, 1 этаж " Foreground="Black"/>
+                   VerticalAlignment="Center">
+            <TextBlock Text="Контакты:" FontSize="20" Foreground="Green" FontWeight="Bold"/>
+            <TextBlock Text="Телефонная служба:" FontSize="20" Foreground="Green" FontWeight="Bold"/>
+            <TextBlock Text="+7 (123) 456-78-90" FontSize="20" Foreground="Black"/>
+            <TextBlock Text="+7 (927) 044-81-00" FontSize="20" Foreground="Black"/>
+            <TextBlock Text="+7 (923) 433-33-33" FontSize="20" Foreground="Black"/>
+            <TextBlock Text="Часы Работы:" FontSize="20" Foreground="Green" FontWeight="Bold" Margin="0 10 0 0"/>
+            <TextBlock Text="Пон-Пт: 10:00-19:00" FontSize="20" Foreground="Black"/>
+            <TextBlock Text="Выходные: 10:00-17:00" FontSize="20" Foreground="Black"/>
+            <TextBlock Text="Адрес:" Foreground="Green" FontSize="20" FontWeight="Bold" Margin="0 10 0 0"/>
+            <TextBlock Text="г.Казань, Ул.Стадионная 1, д1, 1 этаж " FontSize="20" Foreground="Black"/>
             <TextBlock/>
         </StackPanel>
     </Grid>
